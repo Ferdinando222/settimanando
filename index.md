@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+date: 2025-07-08
 ---
 
 # Benvenuto nel mio blog
