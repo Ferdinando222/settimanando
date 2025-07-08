@@ -14,13 +14,66 @@
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
+
+
 <body>
-  {% include header.html %}
-
-  <main>
-    {{ content }}
-  </main>
-
-  {% include footer.html %}
+  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      {% include header.html %}
+      <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div class="@container">
+            <div class="@[480px]:p-4">
+              <div
+                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC83lB0M3alrOg5QgCqbwTf7uEB0Nlqrv0JKMKfvCF_xRLjPho1IztMnqk7q7O4Ub09HdLcMgNO5Xx1TQINe_kCUioNuwL2wd6lwiD0lxs5XYp0nRtXWiscS33PeKC_cUKpXtdG0AVPpXyXyMpZZ5RHDdpDf6PLDunv9FpeSpCgF6AFqTixZZ4Q0U7kO3LmdUROPX_LnZVtr5BT1zKzJLHL3kGTRjk1IUU-phdreKFpntLVGDIwLH4Nba020cBGXlIt8HuEaoFmgYab");'
+              >
+                <div class="flex flex-col gap-2 text-center">
+                  <h1
+                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                  >
+                    Settimanando
+                  </h1>
+                  <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    Pensieri e riflessioni sul viaggio della vita.
+                  </h2>
+                </div>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#3490f3] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                >
+                  <span class="truncate">Esplora gli articoli</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Articoli recenti</h2>
+          
+          {% for post in site.posts limit:3 %}
+          <div class="p-4">
+            <div class="flex items-stretch justify-between gap-4 rounded-xl">
+              <div class="flex flex-[2_2_0px] flex-col gap-4">
+                <div class="flex flex-col gap-1">
+                  <p class="text-[#60758a] text-sm font-normal leading-normal">{{ post.title }}</p>
+                  <p class="text-[#111418] text-base font-bold leading-tight">{{post.subtitle }}</p>
+                  <p class="text-[#60758a] text-sm font-normal leading-normal">{{ post.date | date: "%d/%m/%Y" }}</p>
+                </div>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-fit"
+                >
+                  <span class="truncate">Leggi di più</span>
+                </button>
+              </div>
+              <div
+                class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGcfQxbsKb8M8nieBeEqLRlwsacrcA9i1swjKTWzHM--4vUuPQ8j1Y2aFBoDZjSmUjfvWqVqHsPlb7IrTUTCaK-uRWX80yKMY2_-3J4bv2Uh6lPnNrWIHaD-GdRMaxetcmzitSJVG6S7jyNr3Uww19g8bhJvulczH2YgMZUPmJWfZKOBwNz2wTTEyHvU0LaTPaYGFYb8LvbaldEjesqFrtXgEBAEnGMUtakC4BX143Sb2pZ6MLKTzSWfv4b5pwRBHEA-x5KzdlNUnl");'
+              ></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% include footer.html %}
+    </div>
+  </div>
 </body>
 </html>
