@@ -1,4 +1,4 @@
-<h3 class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Latest Articles</h3>
+<h3 class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Ultimi articoli</h3>
 {% for post in site.posts limit: 3 %}
 <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
   <div
@@ -6,29 +6,34 @@
     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACnSJ3S3yL68ezzwUeXlvPWODkmjRdUIdsy5lFf2RIiRkWqDBdJBeWSd3Jl5GeCO_8hGNg1dZE2rgZEpO9p4uyw5xrgddl3bzZCwIT3Ks-PcMDhWjaPzRRGgwe_TihDkjTms0a84KyLNEtHRz2WDheM0_CzqiOn3NB30J1pymmfky-MFpsVYN8X2h3fNs73DpOlRvlq85qWDzXtNvAEg5yILN7aAI5SWixTNL1tO1KfuwgyUS58otqEd7KmZ5818aDDS3FpdHyGEnE");'
   ></div>
   <div class="flex flex-col justify-center">
-    <p class="text-[#181411] text-base font-medium leading-normal line-clamp-1">The Quiet Moments</p>
-    <p class="text-[#887563] text-sm font-normal leading-normal line-clamp-2">Reflecting on the peace found in solitude.</p>
+    <p class="text-[#181411] text-base font-medium leading-normal line-clamp-1">{{post.title}}</p>
+    <p class="text-[#887563] text-sm font-normal leading-normal line-clamp-2">{{post.subtitle}}</p>
   </div>
 </div>
 {% endfor %}
 
-<h3 class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Index</h3>
+<h3 class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Indice</h3>
 <div class="flex justify-stretch">
   <div class="flex flex-1 gap-3 max-w-[480px] flex-col items-stretch px-4 py-3">
     <button
       class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f0] text-[#181411] text-sm font-bold leading-normal tracking-[0.015em] w-full"
     >
-      <span class="truncate">Music</span>
+      <span class="truncate">Musica</span>
     </button>
     <button
       class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f0] text-[#181411] text-sm font-bold leading-normal tracking-[0.015em] w-full"
     >
-      <span class="truncate">Technology</span>
+      <span class="truncate">Tecnologia</span>
     </button>
     <button
       class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f0] text-[#181411] text-sm font-bold leading-normal tracking-[0.015em] w-full"
     >
-      <span class="truncate">Current Events</span>
+      <span class="truncate">Scrittura creativa</span>
+    </button>
+    <button
+      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f0] text-[#181411] text-sm font-bold leading-normal tracking-[0.015em] w-full"
+    >
+      <span class="truncate">Attualità</span>
     </button>
   </div>
 </div>
