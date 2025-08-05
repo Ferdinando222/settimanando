@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Nando - Sezione Featured</title>
+    <!-- Link al CSS principale -->
+    <link rel="stylesheet" href="/settimanando/assets/css/style.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/header.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/about.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/contact.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/article.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/blog.css">
+    <!-- Link javascript-->
+    <script src="/settimanando/assets/javascript/index.js"></script>
+    <script src="/settimanando/assets/javascript/header.js"></script>
+    <script src="/settimanando/assets/javascript/contact.js"></script>
+</head>
+<body>
+    <!-- Particelle animate di sfondo -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Indicatore di scroll -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <!-- Logo con particelle -->
+            <div class="logo" id="logo" href="/settimanando/">
+                NANDO
+                <div class="logo-particles" id="logoParticles"></div>
+            </div>
+
+            <!-- Breadcrumb (visibile solo quando si scrolla) -->
+            <div class="breadcrumb">
+                <span>Home</span> / <span>Blog</span> / Articolo corrente
+            </div>
+
+            <!-- Menu di navigazione -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a  class="nav-link active" href="/settimanando/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/settimanando/blog" class="nav-link" >Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/settimanando/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/settimanando/contact" >Contatti</a>
+                </li>
+            </ul>
+
+            <!-- Azioni header -->
+            <div class="header-actions">
+                <button class="search-btn" id="searchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                
+                <button class="theme-toggle" id="themeToggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
+                        <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
+                        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Barra di progresso scroll -->
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Search container -->
+        <div class="search-container" id="searchContainer">
+            <input type="text" class="search-input" placeholder="Cerca nel blog...">
+        </div>
+    </header>
+    <!-- Sezione Hero -->
+     <!-- Sezione Featured Articles -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number" data-count="150">0</span>
+                <span class="stat-label">Articoli Pubblicati</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-count="25000">0</span>
+                <span class="stat-label">Lettori Mensili</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-count="6">0</span>
+                <span class="stat-label">Categorie Principali</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-count="3">0</span>
+                <span class="stat-label">Anni di Scrittura</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="container">
+        <h2 class="section-title">Categorie</h2>
+        <p class="section-description">
+            Esplora i diversi argomenti che tratto nel blog, dalla programmazione al design, 
+            dalle tendenze tech alle riflessioni personali.
+        </p>
+        <div class="categories-grid">
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16,18 22,12 16,6" />
+                        <polyline points="8,6 2,12 8,18" />
+                    </svg>
+                </div>
+                <h3 class="category-title">Sviluppo Web</h3>
+                <p class="category-description">
+                    Frontend, backend, framework moderni, best practices e architetture scalabili. 
+                    Tutto quello che serve per creare applicazioni web all'avanguardia.
+                </p>
+                <span class="category-count">42 articoli</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 1.16.21 2.76.21 3.8 0 5.16-1 9-5.45 9-11V7z" />
+                        <path d="M8 11l2 2 4-4" />
+                    </svg>
+                </div>
+                <h3 class="category-title">JavaScript &amp; TypeScript</h3>
+                <p class="category-description">
+                    Approfondimenti sui linguaggi più importanti del web moderno, dalle basi 
+                    alle funzionalità avanzate, passando per i pattern più utilizzati.
+                </p>
+                <span class="category-count">38 articoli</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                </div>
+                <h3 class="category-title">UI/UX Design</h3>
+                <p class="category-description">
+                    Principi di design, usabilità, accessibilità e tendenze nel mondo dell'user experience. 
+                    Come creare interfacce che gli utenti amano usare.
+                </p>
+                <span class="category-count">28 articoli</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                        <polyline points="7.5,4.21 12,6.81 16.5,4.21" />
+                        <polyline points="7.5,19.79 7.5,14.6 3,12" />
+                        <polyline points="21,12 16.5,14.6 16.5,19.79" />
+                    </svg>
+                </div>
+                <h3 class="category-title">Innovazione &amp; AI</h3>
+                <p class="category-description">
+                    Intelligenza artificiale, machine learning, automazione e come queste tecnologie 
+                    stanno cambiando il nostro modo di lavorare e vivere.
+                </p>
+                <span class="category-count">22 articoli</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.763.76z" />
+                    </svg>
+                </div>
+                <h3 class="category-title">Tools &amp; Produttività</h3>
+                <p class="category-description">
+                    Strumenti, workflow, automazioni e tecniche per essere più produttivi 
+                    e organizzati nel lavoro di sviluppatore e designer.
+                </p>
+                <span class="category-count">18 articoli</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4" />
+                        <circle cx="12" cy="12" r="9" />
+                    </svg>
+                </div>
+                <h3 class="category-title">Riflessioni &amp; Career</h3>
+                <p class="category-description">
+                    Pensieri personali sul settore tech, consigli di carriera, crescita professionale 
+                    e riflessioni sul futuro del nostro lavoro.
+                </p>
+                <span class="category-count">12 articoli</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Mission Section -->
+<section class="mission-section">
+    <div class="container">
+        <div class="mission-content">
+            <h2 class="mission-title">La Mia Missione</h2>
+            <p class="mission-text">
+                Credo profondamente che <span class="mission-highlight">la conoscenza condivisa sia la chiave dell'innovazione</span>. 
+                Attraverso questo blog, voglio creare un ponte tra teorie complesse e applicazioni pratiche, 
+                rendendo accessibili concetti avanzati e condividendo esperienze reali dal mondo dello sviluppo.
+            </p>
+            <p class="mission-text">
+                Ogni articolo nasce dalla volontà di <span class="mission-highlight">ispirare, educare e connettere</span> 
+                professionisti e appassionati del settore tech, creando una comunità di persone curiose e sempre 
+                pronte ad apprendere qualcosa di nuovo.
+            </p>
+        </div>
+    </div>
+</section>
+
+    </div>
+  </div>
+</div>
+   
+</body>
+</html>

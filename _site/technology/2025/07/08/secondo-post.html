@@ -1,14 +1,133 @@
----
-layout: post
-title: "Perchè ho creato un blog?"
-category: "Lifestyle"
-date: 2025-07-08
-subtitle: " Questo è il mio primo post"
-time-reading: "8 min"
----
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Nando - Sezione Featured</title>
+    <!-- Link al CSS principale -->
+    <link rel="stylesheet" href="/settimanando/assets/css/style.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/header.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/about.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/contact.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/article.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/blog.css">
+    <!-- Link javascript-->
+    <script src="/settimanando/assets/javascript/index.js"></script>
+    <script src="/settimanando/assets/javascript/header.js"></script>
+    <script src="/settimanando/assets/javascript/contact.js"></script>
+</head>
+<body>
+    <!-- Particelle animate di sfondo -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Indicatore di scroll -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
 
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <!-- Logo con particelle -->
+            <div class="logo" id="logo" href="/settimanando/">
+                NANDO
+                <div class="logo-particles" id="logoParticles"></div>
+            </div>
 
-<article class="container">
+            <!-- Breadcrumb (visibile solo quando si scrolla) -->
+            <div class="breadcrumb">
+                <span>Home</span> / <span>Blog</span> / Articolo corrente
+            </div>
+
+            <!-- Menu di navigazione -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a  class="nav-link active" href="/settimanando/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/settimanando/blog" class="nav-link" >Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/settimanando/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/settimanando/contact" >Contatti</a>
+                </li>
+            </ul>
+
+            <!-- Azioni header -->
+            <div class="header-actions">
+                <button class="search-btn" id="searchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                
+                <button class="theme-toggle" id="themeToggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
+                        <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
+                        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Barra di progresso scroll -->
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Search container -->
+        <div class="search-container" id="searchContainer">
+            <input type="text" class="search-input" placeholder="Cerca nel blog...">
+        </div>
+    </header>
+    <!-- Sezione Hero -->
+    <header class="article-header">
+    <div class="container">
+        <span class="article-category">Technology</span>
+        <h1 class="article-title">L'impatto ambientale degli LLM</h1>
+        <p class="article-subtitle">
+         Analisi dell'impatto ambientale dei Large Language Models
+        </p>
+        <div class="article-meta">
+            <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                </svg>
+                <span>July 08, 2025</span>
+            </div>
+            <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12,6 12,12 16,14"/>
+                </svg>
+                <span>8 min</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="post-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <article class="post">
+                    <div class="post-body">
+                        <article class="container">
     <div class="article-content">
         <p>Il mondo dello sviluppo web sta evolvendo a una velocità impressionante. Ogni anno porta con sé nuove tecnologie, framework innovativi e approcci rivoluzionari cheridefiniscono il modo in cui creiamo esperienze digitali. Il 2025 si preannuncia come un anno particolarmente ricco di innovazioni che trasformeranno radicalmente il nostrosettore.</p>
         <p>In questo articolo, esploreremo le tendenze più significative che stanno plasmando il futuro dello sviluppo web, analizzando non solo le tecnologie emergenti, ma anchel'impatto che avranno sul modo in cui lavoriamo e interagiamo con il web.</p>
@@ -71,8 +190,8 @@ time-reading: "8 min"
         <p>Iscriviti alla newsletter per ricevere i migliori contenuti su sviluppo web, tecnologia e innovazione direttamente nella tua inbox.</p>
         <a href="#" class="cta-button">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
             </svg>
             Iscriviti alla Newsletter
         </a>
@@ -82,7 +201,7 @@ time-reading: "8 min"
         <h2 class="section-title">Articoli Correlati</h2>
         <div class="articles-grid">
             <a href="#" class="article-card">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="JavaScript Moderno">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="JavaScript Moderno" />
                 <div class="card-content">
                     <div class="card-category">JavaScript</div>
                     <h3 class="card-title">Le Nuove Funzionalità di JavaScript ES2024</h3>
@@ -90,7 +209,7 @@ time-reading: "8 min"
                 </div>
             </a>
             <a href="#" class="article-card">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="React Framework">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="React Framework" />
                 <div class="card-content">
                     <div class="card-category">React</div>
                     <h3 class="card-title">React Server Components: Guida Completa</h3>
@@ -98,7 +217,7 @@ time-reading: "8 min"
                 </div>
             </a>
             <a href="#" class="article-card">
-                <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Performance Web">
+                <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Performance Web" />
                 <div class="card-content">
                     <div class="card-category">Performance</div>
                     <h3 class="card-title">Ottimizzazione Web: Tecniche Avanzate</h3>
@@ -108,3 +227,13 @@ time-reading: "8 min"
         </div>
     </section>
 </article>
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+   
+</body>
+</html>

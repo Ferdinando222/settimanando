@@ -1,43 +1,33 @@
-<!DOCTYPE html>
-<html lang="it">
-    <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-
-    <title>Il Diario Di Nando</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
+--- 
+ layout: default
+ title: Home
+---
 
 
-<body>
-  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
-    <div class="layout-container flex h-full grow flex-col">
-    {% include header.html %}
-    <div class="gap-1 px-6 flex flex-1 justify-center py-5">
-      <div class="layout-content-container flex flex-col max-w-[920px] flex-1">
-        <div class="@container">
-          <div class="@[480px]:px-4 @[480px]:py-3">
-            <div
-              class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-white @[480px]:rounded-xl min-h-[218px]"
-              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD40lVQjOLuR3O4Hy1vYUNAwPPTSGPj3A1boZWo3c9aK954m-iASSuXaMA1wP1qTEmvnynmMfqKcjDbNScI0wRd5crytXCk_8-JtmwUPr406bBnhc2xNoCvJWqnEnxZE1Z5tmn70ysYy2kMOe1JRmxGFMg0GF6RjbDMEgsmwxvPKG9zI8ayeGdy-eZQzLr3HKQaGzeiK-3arCDbcppwd2lnr_H0x_hoFok4lsxGWivQn0FX4r1TxeRxMa4IoeLAx1B2-dMy1xX6YvZI");'
-            ></div>
+ <section class="hero-section">
+      <div class="container">
+          <h1 class="hero-title">Benvenuti nel mio blog personale</h1>
+          <p class="hero-subtitle">Mi chiamo Nando e in questo spazio condividerò le mie attività, passioni e pensieri.</p>
+      </div>
+  </section>
+  <!-- Sezione Featured Articles -->
+  <section class="featured-section">
+      <div class="container">
+          <h2 class="section-title">Ultimi Articoli</h2>
+          
+          <div class="articles-grid">
+              {% for post in site.posts limit: 3 %}
+              <article class="article-card" >
+                  <div class="category-badge">{{post.category}}</div>
+                  <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                  <div class="article-content-home">
+                      <h3 class="article-title">{{post.title}}</h3>
+                      <p class="article-subtitle">{{post.subtitle}}</p>
+                      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="read-more">Leggi tutto</a>
+                  </div>
+              </article>
+              {% endfor %}
           </div>
-        </div>
-        {% include home_cover.html%}
       </div>
-      <div class="layout-content-container flex flex-col w-[360px]">
-        {% include sidebar.html%}
-      </div>
-    </div>
-    {% include footer.html %}
-</body>
-</html>
-
+  </section>
 

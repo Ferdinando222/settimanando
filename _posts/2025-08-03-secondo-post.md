@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Perchè ho creato un blog?"
-category: "Lifestyle"
+title: "L'impatto ambientale degli LLM"
+category: "Technology"
 date: 2025-07-08
-subtitle: " Questo è il mio primo post"
+subtitle: " Analisi dell'impatto ambientale dei Large Language Models"
 time-reading: "8 min"
 ---
 

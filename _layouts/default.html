@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Nando - Sezione Featured</title>
+    <!-- Link al CSS principale -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/article.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+    <!-- Link javascript-->
+    <script src="{{ '/assets/javascript/index.js' | relative_url }}"></script>
+    <script src="{{ '/assets/javascript/header.js' | relative_url }}"></script>
+    <script src="{{ '/assets/javascript/contact.js' | relative_url }}"></script>
+</head>
+<body>
+    <!-- Particelle animate di sfondo -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Indicatore di scroll -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Header -->
+    {% include header.html %}
+    <!-- Sezione Hero -->
+    {{ content }}
+   
+</body>
+</html>
