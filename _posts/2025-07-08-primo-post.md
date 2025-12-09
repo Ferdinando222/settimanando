@@ -66,7 +66,7 @@ time-reading: "8 min"
         <p>Come developer, è essenziale rimanere aggiornati, sperimentare con nuove tecnologie e, soprattutto, mantenere una mentalità aperta verso l'innovazione. Il futuro dellosviluppo web è entusiasmante e pieno di opportunità per chi è pronto a coglierle.</p>
     </div>
     <!-- Call to Action -->
-    <div class="article-cta">
+    <!-- <div class="article-cta">
         <h3>Ti è piaciuto questo articolo?</h3>
         <p>Iscriviti alla newsletter per ricevere i migliori contenuti su sviluppo web, tecnologia e innovazione direttamente nella tua inbox.</p>
         <a href="#" class="cta-button">
@@ -76,8 +76,8 @@ time-reading: "8 min"
             </svg>
             Iscriviti alla Newsletter
         </a>
-    </div>
-    <!-- Articoli correlati -->
+    </div> -->
+    <!-- Articoli correlati
     <section class="related-articles">
         <h2 class="section-title">Articoli Correlati</h2>
         <div class="articles-grid">
@@ -107,4 +107,4 @@ time-reading: "8 min"
             </a>
         </div>
     </section>
-</article>
+</article> -->

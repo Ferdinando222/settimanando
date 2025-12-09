@@ -67,15 +67,40 @@ mobileOverlay.addEventListener('click', () => {
 
 // Navigazione attiva in base alla pagina corrente
 const navLinks = document.querySelectorAll('.nav-link');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 let currentPath = window.location.pathname;
+
+// Debug
+console.log('Current path:', currentPath);
 
 // Normalizza il path rimuovendo lo slash finale (tranne per root)
 if (currentPath !== '/' && currentPath.endsWith('/')) {
     currentPath = currentPath.slice(0, -1);
 }
 
+// Gestisci menu desktop
 navLinks.forEach(link => {
     let linkPath = link.getAttribute('href');
+    console.log('Desktop link href:', linkPath);
+    
+    // Normalizza anche il linkPath
+    if (linkPath !== '/' && linkPath.endsWith('/')) {
+        linkPath = linkPath.slice(0, -1);
+    }
+    
+    // Rimuovi tutte le classi active
+    link.classList.remove('active');
+    
+    // Confronto esatto
+    if (currentPath === linkPath) {
+        link.classList.add('active');
+    }
+});
+
+// Gestisci menu mobile
+mobileNavLinks.forEach(link => {
+    let linkPath = link.getAttribute('href');
+    console.log('Mobile link href:', linkPath);
     
     // Normalizza anche il linkPath
     if (linkPath !== '/' && linkPath.endsWith('/')) {
