@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/article.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
-    <!-- Link javascript-->
-    <script src="{{ '/assets/javascript/index.js' | relative_url }}"></script>
-    <script src="{{ '/assets/javascript/header.js' | relative_url }}"></script>
-    <script src="{{ '/assets/javascript/contact.js' | relative_url }}"></script>
 </head>
 <body>
     <!-- Particelle animate di sfondo -->
@@ -27,6 +23,11 @@
     {% include header.html %}
     <!-- Sezione Hero -->
     {{ content }}
+
+    <!-- Link javascript-->
+    <script src="{{ '/assets/javascript/index.js' | relative_url }}"></script>
+    <script src="{{ '/assets/javascript/header.js' | relative_url }}"></script>
+    <script src="{{ '/assets/javascript/contact.js' | relative_url }}"></script>
    
 </body>
 </html>

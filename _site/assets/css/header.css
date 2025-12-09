@@ -326,7 +326,7 @@
 
         .header.scrolled .breadcrumb {
             opacity: 1;
-            visibility: visible;
+            visibility: hidden;
         }
 
         .breadcrumb span {
