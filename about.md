@@ -16,51 +16,23 @@ title: about
     <div class="container" style="display: contents;">
         <div class="hero-content">
             <div class="hero-text">
-                Ciao! Sono <strong>Nando</strong>, un appassionato di tecnologia, innovazione e storytelling digitale. 
-                Con oltre 8 anni di esperienza nel mondo del web development e del design, ho trasformato 
-                la mia passione in una professione che mi permette di creare esperienze digitali uniche e coinvolgenti.
+                Ciao! Mi chiamo <strong>Ferdinando</strong>, ma per gli amici sono semplicemente <strong>Nando</strong>.
+                Sono un ingegnere audio e in questo blog voglio condividere la mia passione raccontando aneddoti, riflessioni e novità sul mondo tecnologico che ruota attorno all’audio.
             </div>
             <div class="hero-text">
-                Quando non sono al computer, mi piace esplorare nuovi luoghi, leggere libri di fantascienza, 
-                e sperimentare con la fotografia. Credo fermamente che la tecnologia debba servire le persone, 
-                non il contrario, e questo principio guida ogni progetto su cui lavoro.
             </div>
         </div>
         <div class="hero-image">
             <div class="profile-card">
                 <div class="profile-image">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Nando Profile">
+                    <img src="./assets/picture.jpg" alt="Nando Profile">
                 </div>
                 <h3 style="text-align: center; margin-bottom: 10px;">Nando</h3>
-                <p style="text-align: center; color: #667eea; font-weight: 600;">Full Stack Developer & Designer</p>
+                <p style="text-align: center; color: #667eea; font-weight: 600;">Audio Engineer</p>
             </div>
         </div>
     </div>
 </section>
-<!-- Sezione Statistiche -->
-<!-- <section class="stats-section">
-    <div class="container">
-        <h2 class="section-title">I Numeri</h2>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-number" data-count="150">0</span>
-                <span class="stat-label">Progetti Completati</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" data-count="8">0</span>
-                <span class="stat-label">Anni di Esperienza</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" data-count="50">0</span>
-                <span class="stat-label">Clienti Soddisfatti</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" data-count="1000">0</span>
-                <span class="stat-label">Tazze di Caffè</span>
-            </div>
-        </div>
-    </div>
-</section> -->
 <!-- Sezione Skills -->
 <section class="skills-section">
     <div class="container">
@@ -111,7 +83,7 @@ title: about
             di ricerca e sviluppo nel campo dell'audio engineering.
         </p>
         <div class="timeline">
-            <!-- <div class="timeline-item">
+            <div class="timeline-item">
                 <div class="timeline-content">
                     <div class="timeline-year">2025</div>
                     <div class="timeline-title">PhD in Telecommunications</div>
@@ -120,7 +92,7 @@ title: about
                     </div>
                 </div>
                 <div class="timeline-dot"></div>
-            </div> -->
+            </div> 
             <div class="timeline-item">
                 <div class="timeline-content">
                     <div class="timeline-year">2021 - 2024</div>
