@@ -19,9 +19,10 @@
               {% for post in site.posts limit: 3 %}
               <article class="article-card" >
                   <div class="category-badge">{{post.category}}</div>
-                  <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                  <div class="article-image" style="background-image: url('{{ post.image | relative_url }}')"></div>
                   <div class="article-content-home">
-                      <h3 class="article-title">{{post.title}}</h3>
+                      <!-- Rendi più piccolo titolo -->
+                      <h3 class="article-title" style="font-size: 1.5rem;">{{post.title}}</h3>
                       <p class="article-subtitle">{{post.subtitle}}</p>
                       <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="read-more">Leggi tutto</a>
                   </div>

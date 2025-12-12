@@ -154,7 +154,7 @@
             text-align: justify;
         }
 
-        .article-content p:first-of-type {
+        .article-content p{
             font-size: 1.2rem;
             color: #e0e0e0;
             font-weight: 500;
@@ -416,6 +416,30 @@
             line-height: 1.5;
         }
 
+        /* Photo */
+        .image-container {
+            width: 100%;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .image-container img {
+            max-width: 450px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Animazione morbida al passaggio del mouse */
+        .animated-image {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .animated-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -446,3 +470,4 @@
             .article-cta {
                 padding: 30px 20px;
             }
+        }

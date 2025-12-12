@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Nando - Sezione Featured</title>
+    <!-- Link al CSS principale -->
+    <link rel="stylesheet" href="/settimanando/assets/css/style.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/header.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/about.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/contact.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/article.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/blog.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/footer.css">
+    <!-- Link for asset photos-->
+     
+</head>
+<body>
+    <!-- Particelle animate di sfondo -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Indicatore di scroll -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <!-- Logo con particelle -->
+            <a class="logo" id="logo" href="/settimanando/">
+                NANDO
+                <div class="logo-particles" id="logoParticles"></div>
+            </a>
+
+            <!-- Menu di navigazione -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a  class="nav-link" href="/settimanando/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/settimanando/blog" class="nav-link" >Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/settimanando/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/settimanando/contact" >Contatti</a>
+                </li>
+            </ul>
+
+            <!-- Azioni header -->
+            <div class="header-actions">
+                <button class="search-btn" id="searchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                
+                <button class="theme-toggle" id="themeToggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
+                        <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
+                        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Barra di progresso scroll -->
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Search container -->
+        <div class="search-container" id="searchContainer">
+            <input type="text" class="search-input" placeholder="Cerca nel blog...">
+        </div>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav">
+            <li><a href="/settimanando/" class="active">Home</a></li>
+            <li><a href="/settimanando/blog">Blog</a></li>
+            <li><a href="/settimanando/about">About</a></li>
+            <li><a href="/settimanando/contact">Contatti</a></li>
+        </ul>
+    </div>
+
+    <!-- Sezione Hero -->
+    <header class="article-header">
+    <div class="container">
+        <span class="article-category">Curiosità tech</span>
+        <h1 class="article-title">COME UNA MINUSCOLA MOSCA DAL SUPER UDITO HA ISPIRATO LA COSTRUZIONE DI NUOVI MICROFONI MEMS </h1>
+        <p class="article-subtitle">
+        Ormia Ochracea: la mosca dal super udito
+        </p>
+        <div class="article-meta">
+            <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                </svg>
+                <span>December 11, 2025</span>
+            </div>
+            <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12,6 12,12 16,14"/>
+                </svg>
+                <span>8 min</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="post-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <article class="post">
+                    <div class="post-body">
+                        <article class="container">
+    <div class=" hero-text article-content">
+        <p> <strong>“Ogni cosa che puoi immaginare, la natura l’ha già creata”.</strong> Così Albert Einstein, con una grande coscienza ambientalista, si esprimeva nei confronti della natura più di 70 anni fa. La natura è sempre stata fonte di ispirazione per i più grandi scienziati e per la creazione di nuove tecnologie. Nel Rinascimento, Leonardo da Vinci trascorreva ore ad osservare il volo degli uccelli, cercando di coglierne ogni dettaglio e ogni segreto. Quella capacità di librarsi nell’aria, allora percepita come un sogno irraggiungibile, è oggi diventata una realtà concreta. Così come l’architetto Joseph Paxton, che progettò il Crystal Palace nel 1851 prendendo spunto dalla struttura delle foglie di un giacinto sudamericano.</p>
+        <p>Potrei andare avanti per ore, citando esempi che spaziano dall’ingegneria all’architettura, dalla moda fino ai più avanzati metamateriali. Ma in questo articolo mi limiterò a presentarvi un caso per me particolarmente vicino, perché riguarda il mondo dell’audio e, in particolare, quello dei microfoni: ovvero quello di una minuscola mosca gialla notturna, conosciuta con il nome scientifico <strong>Ormia Ochracea</strong>.</p>
+        <div class="image-container">
+            <img src="/settimanando/assets/picture_blog/o-ochracea.jpg" alt="Ormia Ochracea" class="animated-image" />
+        </div>
+        <p>Ed è il classico esempio di non giudicare un libro dalla copertina: dall’aspetto tutt’altro che elegante (come potrete vedere dalla foto sopra), chi direbbe mai che un esserino così minuscolo possa possedere un udito e un senso dell’orientamento sonoro straordinari? Sulla carta sembrerebbe del tutto incapace di localizzare con precisione una sorgente sonora, eppure lo fa. E il motivo sarà più chiaro dopo aver fatto un piccolo excursus sul magico mondo dell’audio binaurale. Per chi non fosse pratico dell’argomento, cercherò di spiegare il tutto nel modo più intuitivo possibile. Se invece sei già ferrato sull’argomento, allora puoi anche saltare questa parte e passare al prossimo paragrafo. 
+        </p>
+        <h2>Introduzione al binaurale </h2>
+        <p>Vi siete mai chiesti perché l’uomo, così come la maggior parte degli animali, abbia due orecchie e non una sola? Non per una questione di estetica o di simmetria, ma perché ci aiutano a capire da dove proviene un suono. Il cervello, infatti, riesce a rilevare i minimi ritardi e le differenze di intensità tra ciò che arriva a un orecchio e all’altro, e sfrutta queste informazione in modo da individuare con precisione la posizione della sorgente sonora.</p>
+        <p>Nel dettaglio, sfrutta due segnali principali, <strong>l’ITD </strong> (Interaural Time Difference) e <strong>l’ILD </strong>(Interaural Level DIfference). L’ITD rappresenta la <strong>differenza di tempo </strong>con cui un suono raggiunge le due orecchie. Nel pratico, se la tua sorgente sonora è localizzata alla tua destra, allora arriverà prima nell’orecchio destro e poi con un certo ritardo nell’orecchio sinistro. Ecco, quel ritardo rappresenta il tuo ITD. In generale questo segnale è particolarmente efficace per localizzare suoni a <strong>bassa frequenza</strong> (approsimativamente meno di 1kHz), perché in questo caso le lunghezze d’onda sono più grandi del nostro capo ( e quindi riescono ad “andare oltre” la nostra testa). L’ILD invece rappresenta la differenza di <strong> intensità di volume </strong>tra le due orecchie. Quindi, per riprendere l'esempio precedente, se la tua sorgete è localizzata alla tua destra, allora l’orecchio destro lo percepirà più forte rispetto a quello sinistro, perché la tua testa fa da “ombra” acustica e attenuerà un po' dell’energia sonora. Al contrariro dell’ITD, l’ILD è più efficace alle <strong>alte frequenze</strong> (approsimativamente maggiore di 1 kHz) questo perché le lunghezze d’onda saranno più corte e saranno più facilmente bloccate dalla testa, creando quindi un effetto ombra maggiore. Il cervello quindi, combinando queste due informazioni, riesce ad orientarsi nello spazio e a localizzare le sorgenti sonore con grande precisione</p>
+        <div style="text-align:center; font-size:0.5em;">
+            Le immagini sotto sono state generate artificialmente tramite intelligenza artificiale a scopo divulgativo.
+        </div>
+        <div class="image-row" style="display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+            <div class="image-container" style="flex: 1; text-align: center;">
+                <img src="/settimanando/assets/picture_blog/Gemini_Generated_Image_43r3h43r3h43r3h4.png" alt="Esempio ITD" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" />
+                <p><strong>ITD:</strong> Differenza di tempo tra le orecchie</p>
+            </div>
+            <div class="image-container" style="flex: 1; text-align: center;">
+                <img src="/settimanando/assets/picture_blog/Gemini_Generated_Image_vp7fw4vp7fw4vp7f.png" alt="Esempio ILD" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" />
+                <p><strong>ILD:</strong> Differenza di intensità tra le orecchie</p>
+            </div> 
+        </div>
+        <blockquote>
+            L’audio binaurale sfrutta le differenze di tempo e di intensità percepite dalle due orecchie per permettere al cervello di localizzare i suoni nello spazio
+        </blockquote>
+        <h2>Il segreto del super udito della mosca</h2>
+            <p>Il metodo alla base dell’audio binaurale però funziona solo a una condizione: che i sensori (che siano orecchie, microfoni o altro) siano <strong>sufficientemente separati</strong>, così da rendere i ritardi e le differenze di livello sonoro abbastanza grandi da essere percepiti. Altrimenti, il nostro cervello farebbe molta fatica a distinguere le differenze. Ecco perché lo scetticismo iniziale nei confronti della nostra super-mosca ha senso: come diavolo fa un esserino così minuscolo, con orecchie praticamente attaccate, a localizzare i suoni con una precisione sorprendente? Parliamo di una creatura che è mediamente grande meno di 1 cm, una testa grande all'incirca 1 mm e i due timpani sono separati tra loro a una distanza che va dai  450-520 μm (per intenderci circa la metà di un chicco di riso). L'ITD naturale in questi casi per una frequenza di 5 kHz misura circa 1,5-2 μs, una grandezza che nessun cervello riesce a distinguere (il cervello umano per esempio può percepire differenze di circa 10–20 μs tra le orecchie). La risposta che svela il segreto di questa mosca è da cercare nella sua struttura anatomica, completamente diversa dalla nostra, ma sorprendentemente efficace in dimensioni così piccole.</p>
+            <p> Essa infatti possiede due membrane situate sotto la testa, che funzionano in modo simile ai nostri timpani ed hanno lo scopo quindi di convertire le vibrazioni in segnali neurali che vanno al cervello. A differenza dei nostri timpani, però, queste membrane non sono separate e indipendenti, ma sono collegate fisicamente da un ponte elastico. Questo significa che quando una membrana vibra, le sue vibrazioni influenzeranno anche l’altra, e viceversa. In fisica, questo fenomeno prende il nome di <strong>coupling</strong>, ovvero accoppiamento tra due sistemi che interagiscono tra loro.
+            </p>
+            <div class="image-container">
+            <img src="/settimanando/assets/picture_blog/Gemini_Generated_Image_6s3lyc6s3lyc6s3l.png" alt="Ormia Ochracea" class="animated-image" />
+            </div>
+            <p>Il coupling forza i due timpani a muoversi secondo due modi:
+                <li><strong>Modo Traslazionale:</strong> ovvero le membrane oscillanno insieme nello stesso verso e si dice che sono in fase. Questo modo permette di capire l'intensità del suono.</li>
+                <li><strong>Modo Rotazionale:</strong> ovvero quando una membrana va su, l'altra va giù e si dice che sono in controfase. Questo modo permette invece di capire in che direzione proviene il suono.</li>
+            </p>
+            <p>
+            Questi modi avvengono contemporanemente, ma a secondo della direzione della sorgente sonora, con pesi diversi. Ad esempio se la sorgente è posta di fronte alla mosca, allora il modo traslazionale domina, mentre se il suono arriva da sinistra/destra allora è il modo rotazionale a dominare. In tutti gli altri casi sarà una sorta di ibrido. Questo sistema quindi permette alla mosca di avere una sorta di amplificatore meccanico, che permette di migliorare di <strong>40 volte</strong> i valori naturali di ITD e ILD, raggiungendo prestazioni simili a quello dell'uomo, riuscendo infatti a localizzare suoni con una risoluzione di circa 2°.
+            </p>
+            <div class="image-container">
+            <img src="/settimanando/assets/picture_blog/Gemini_Generated_Image_7yad4e7yad4e7yad.png" alt="Ormia Ochracea" class="animated-image" />
+            </div>
+            <div class="highlight-box">
+                <h4>Come fa la mosca ad avere un udito così direzionale nonostante le sue dimensioni?</h4>
+                <p>La propria struttura anatomica permette un accoppiamento meccanico tra le proprie membrane uditive, migliorando sia l'ITD che l'ILD di 40 volte rispetto ai valori naturali attesi</p>
+            </div>
+        <h2>I nuovi microfoni MEMS direzionali copiano la struttura anatomica della mosca</h2>
+            <p> Una volta scoperto il segreto dell'Ormia Ochracea, l'uomo non deve far altro che copiare dalla natura stessa. Ed è esattamente ciò che ha fatto. Infatti questo tipo di problema può essere traslato nel mondo dei microfoni <strong>MEMS</strong> (Micro-Electro-Mechanical-System), ovvero minuscoli microfoni (grandi pochi millimetri) realizzati con le stesse tecnologie dei microchip. Oggi vengono usati principalmente in sistemi come smartphone, tablet, laptop, cuffie, smartwatch e smartglasses, ovvero sistemi dove è appunto necessario integrare sensori audio <strong>piccoli, leggeri e a basso consumo</strong>. Insomma, li usiamo ogni giorno senza probabilmente nemmeno rendercene conto.
+           <p> Per rendere i microfoni MEMS direzionali, fino a poco tempo fa c'erano due soluzioni principali. La prima consisteva nell'usare due microfoni omnidirezionali (cioè in grado di catturare il suono da tutte le direzioni) combinando i segnali ottenuti ottenendo un certo grado di direzionalità. La seconda prevedeva di creare due input acustici (attraverso due fori) all'interno di uno stesso microfono. Entrambi i metodi però si sono rilevati non molto soddisfacenti, a causa dell'elevato rumore che generavano e della scarsa direzionalità che riuscivano a raggiungere e, insomma, purtroppo non hanno avuto molto successo.
+           </p>
+            <p> 
+            Il 2009 però rappresenta l'anno di svolta. Il ricercatore e professore dell'università di Binghamnton, <strong>Ronald N. Miles</strong> , nel suo paper pioneristico <em>“A low-noise differential microphone inspired by the ears of the parasitoid fly Ormia ochracea"</em>, fu il primo ad applicare l'idea di sensori accoppiati ispirandosi appunto alla struttura dell'Ormia Ochracea e realizzò un microfono miniaturizzato ottenendo ottimi risultati in termini di rumore e direzionalità. Da lì in poi questa idea è stata applicata anche ai microfoni MEMS. Negli anni successivi infatti un gruppo di ricerca dell'università di Strathclyde (Scozia), perfezionò il concetto e tra il 2016 e il 2018 realizzarono i primi microfoni MEMS direzionali biomimetici che imitano la struttura della mosca.
+            </p>
+            <p>
+            Un microfono direzionale di questo tipo è utile in diversi contesti. Può essere usato negli apparati acustici per aiutare chi ha difficolta a comprendere il parlato, soprattuto in ambienti rumorosi. Vengono impiegati in array di microfoni (ovvero un insieme di microfoni posti in una certa geometria) per permettere di migliorare la localizzazione di sorgenti sonore e individuare fonti di rumore. Questo tipo di microfoni direzionali MEMS, grazie alla miniaturizzazione e alla precisione ispirata alla Ormia, sta quindi diventando sempre più interessante per applicazioni sia a scopo industriale che commerciale.
+            </p>
+        <h2>Semplice, ma geniale</h2>
+            <p>
+            Non so voi, ma io, dopo aver scoperto il segreto di questa mosca, sono rimasto affascinato dalla genialità della natura: capace di risolvere problemi che sembrano impossibili, ma che, una volta svelati, appaiono straordinariamente semplici. Alla fine, tutto ciò che serviva era collegare tra loro i due sensori… eppure proprio in quella semplicità si nasconde la vera genialità. Ed è forse questo l'insegnamento più grande che la natura ci può dare, al di là della semplice ispirazione.
+            </p>
+
+</p></div></article>
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="#">
+                  <div class="text-[#60758a]" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#60758a]" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#60758a]" data-icon="FacebookLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <p class="text-[#60758a] text-base font-normal leading-normal">© 2025 Il Diario di Nando. Tutti i diritti riservati.</p>
+            </footer>
+          </div>
+        </footer>
+    <!-- Link javascript-->
+    <script src="/settimanando/assets/javascript/index.js"></script>
+    <script src="/settimanando/assets/javascript/header.js"></script>
+    <script src="/settimanando/assets/javascript/contact.js"></script>
+   
+</body>
+</html>
