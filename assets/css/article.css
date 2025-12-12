@@ -439,6 +439,14 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
+        .article-content ol li a {
+            color: white;       /* colore del testo */
+            text-decoration: underline;  /* opzionale: sottolineatura */
+        }
+
+        .article-content ol li a:hover {
+            color: #ddd;        /* colore quando ci passi sopra il mouse */
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
