@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="/settimanando/assets/css/article.css">
     <link rel="stylesheet" href="/settimanando/assets/css/blog.css">
     <link rel="stylesheet" href="/settimanando/assets/css/footer.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/autumn-theme.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/night-theme.css">
+    <link rel="stylesheet" href="/settimanando/assets/css/home.css">
     <!-- Link for asset photos-->
      
 </head>
 <body>
-    <!-- Particelle animate di sfondo -->
-    <div class="particles" id="particles"></div>
-    
     <!-- Indicatore di scroll -->
     <div class="scroll-indicator" id="scrollIndicator"></div>
 
@@ -27,6 +27,15 @@
         <div class="nav-container">
             <!-- Logo con particelle -->
             <a class="logo" id="logo" href="/settimanando/">
+                <!-- I due timpani accoppiati della mosca Ormia ochracea -->
+                <svg class="logo-mark" viewBox="0 0 30 20" aria-hidden="true">
+                    <path d="M11 18 L15 11 L19 18 Z" fill="var(--dim)"/>
+                    <g class="rock">
+                        <line x1="4" y1="9" x2="26" y2="9" stroke="var(--paper)" stroke-width="1.6"/>
+                        <circle cx="4" cy="9" r="3.4" fill="var(--amber)"/>
+                        <circle cx="26" cy="9" r="3.4" fill="var(--amber)"/>
+                    </g>
+                </svg>
                 NANDO
                 <div class="logo-particles" id="logoParticles"></div>
             </a>
@@ -37,13 +46,13 @@
                     <a  class="nav-link" href="/settimanando/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/settimanando/blog" class="nav-link" >Blog</a>
+                    <a href="/settimanando/blog" class="nav-link">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/settimanando/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/settimanando/contact" >Contatti</a>
+                    <a class="nav-link" href="/settimanando/contact">Contatti</a>
                 </li>
             </ul>
 
@@ -101,25 +110,114 @@
     </div>
 
     <!-- Sezione Hero -->
-     <section class="hero-section">
+     <section class="hero-section home-hero">
       <div class="container">
-          <h1 class="hero-title">Benvenuti nel mio blog personale</h1>
-          <p class="hero-subtitle">Sono un appassionato di tecnologia, audio e musica</p>
+          <span class="hand">settimanando · il diario di Nando</span>
+          <h1 class="hero-title">Racconto il suono, <em>una settimana alla volta.</em></h1>
+          <p class="hero-subtitle">Sono Nando, ingegnere audio. Qui scrivo di tecnologia, musica e delle storie curiose che si nascondono dietro a ogni suono.</p>
+          <div class="string-row">
+              <canvas id="string" tabindex="0" aria-label="Una corda da pizzicare: passaci sopra con il mouse o premi Invio"></canvas>
+              <div class="string-note">
+                  <svg viewBox="0 0 54 40" aria-hidden="true"><path d="M50 6 C34 4 18 10 12 30 M12 30 L6 21 M12 30 L20 24"/></svg>
+                  <span class="hand">pizzica la corda</span>
+              </div>
+          </div>
+          <button class="sound-btn" id="soundBtn" type="button" aria-pressed="false">Suono spento</button>
       </div>
   </section>
+
+  <!-- Stanza d'ascolto: i temi del blog attorno all'ascoltatore -->
+  <section class="room" id="room">
+      <div class="container">
+          <div class="section-head">
+              <span class="hand">la stanza d'ascolto</span>
+              <h2 class="section-title">Da dove arriva la prossima storia?</h2>
+              <p class="section-description">Ogni sorgente è un tema del blog. Avvicinati a una e ascolta cosa racconta. Le onde raggiungono prima l'orecchio più vicino, proprio come spiego nell'articolo sulla mosca dal super udito.</p>
+          </div>
+          <div class="room-grid">
+              <div class="stage-wrap">
+                  <canvas id="stage" aria-label="Stanza d'ascolto: i temi del blog disposti attorno a un ascoltatore"></canvas>
+                  <div class="chips" id="chips" role="group" aria-label="Temi"></div>
+              </div>
+              <div class="story" id="story" aria-live="polite" data-contact="/settimanando/contact"><div class="story-inner" id="storyInner"></div></div>
+          </div>
+      </div>
+      
+      <script type="application/json" id="room-data">
+      [
+      
+          
+          
+          {
+              "name": "Curiosità",
+              "angle": 54,
+              "desc": "Curiosità e fatti interessanti sull'audio.",
+              "count": 1,
+              
+              
+              "post": {
+                  "title": "Come una minuscola mosca dal super udito ha ispirato la costruzione di nuovi microfoni MEMS",
+                  "sub": "Ormia Ochracea: la mosca dal super udito",
+                  "text": "Ha i timpani a mezzo millimetro di distanza, eppure localizza un suono con circa 2° di precisione. Il segreto è un ponte elastico tra le sue orecchie, e oggi lo copiano i microfoni dei nostri smartphone.",
+                  "date": "11 dicembre 2025",
+                  "read": "8 min",
+                  "url": "/settimanando/curiosit%C3%A0%20tech/2025/12/11/primo-post.html"
+              }
+          },
+      
+          
+          
+          {
+              "name": "Musica",
+              "angle": 126,
+              "desc": "Playlist, recensioni di album, artisti emergenti.",
+              "count": 0
+          },
+      
+          
+          
+          {
+              "name": "Viaggi e Storie",
+              "angle": 198,
+              "desc": "Avventure in giro per il mondo, racconti di viaggio e incontri fatti lungo la strada.",
+              "count": 0
+          },
+      
+          
+          
+          {
+              "name": "Riflessioni & Career",
+              "angle": 270,
+              "desc": "Pensieri sulla crescita personale, sul lavoro e sulle ambizioni.",
+              "count": 0
+          },
+      
+          
+          
+          {
+              "name": "Intelligenza Artificiale",
+              "angle": 342,
+              "desc": "Come l'intelligenza artificiale sta cambiando il suono, il lavoro e il nostro modo di vivere.",
+              "count": 0
+          }
+      
+      ]
+      </script>
+  </section>
+
   <!-- Sezione Featured Articles -->
-  <section class="featured-section">
+  <section class="featured-section home-latest">
       <div class="container">
           <h2 class="section-title">Ultimi Articoli</h2>
-          
+
           <div class="articles-grid">
               
               <article class="article-card" >
                   <div class="category-badge">Curiosità tech</div>
-                  <div class="article-image" style="background-image: url('/settimanando/assets/picture_blog/o-ochracea.jpg')"></div>
+                  <div class="img-clip"><div class="article-image" style="background-image: url('/settimanando/assets/picture_blog/o-ochracea.jpg')"></div></div>
                   <div class="article-content-home">
                       <!-- Rendi più piccolo titolo -->
-                      <h3 class="article-title" style="font-size: 1.5rem;">COME UNA MINUSCOLA MOSCA DAL SUPER UDITO HA ISPIRATO LA COSTRUZIONE DI NUOVI MICROFONI MEMS </h3>
+                      <h3 class="article-title" style="font-size: 1.5rem;">Come una minuscola mosca dal super udito ha ispirato la costruzione di nuovi microfoni MEMS</h3>
                       <p class="article-subtitle">Ormia Ochracea: la mosca dal super udito</p>
                       <a href="/settimanando/curiosit%C3%A0%20tech/2025/12/11/primo-post.html" class="read-more">Leggi tutto</a>
                   </div>
@@ -172,6 +270,7 @@
     <script src="/settimanando/assets/javascript/index.js"></script>
     <script src="/settimanando/assets/javascript/header.js"></script>
     <script src="/settimanando/assets/javascript/contact.js"></script>
+    <script src="/settimanando/assets/javascript/home.js"></script>
    
 </body>
 </html>

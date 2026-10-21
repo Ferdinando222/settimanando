@@ -1,0 +1,27 @@
+# Temi della "stanza d'ascolto" in home.
+# angle: posizione attorno all'ascoltatore in gradi (0 = destra, 90 = davanti, 180 = sinistra, 270 = dietro)
+# categories: valori di "category" nei post che appartengono a questo tema
+- name: "Curiosità"
+  angle: 54
+  categories: ["Curiosità tech", "Curiosità"]
+  description: "Curiosità e fatti interessanti sull'audio."
+
+- name: "Musica"
+  angle: 126
+  categories: ["Musica"]
+  description: "Playlist, recensioni di album, artisti emergenti."
+
+- name: "Viaggi e Storie"
+  angle: 198
+  categories: ["Viaggi e Storie", "Viaggi"]
+  description: "Avventure in giro per il mondo, racconti di viaggio e incontri fatti lungo la strada."
+
+- name: "Riflessioni & Career"
+  angle: 270
+  categories: ["Riflessioni & Career", "Riflessioni"]
+  description: "Pensieri sulla crescita personale, sul lavoro e sulle ambizioni."
+
+- name: "Intelligenza Artificiale"
+  angle: 342
+  categories: ["Intelligenza Artificiale", "AI"]
+  description: "Come l'intelligenza artificiale sta cambiando il suono, il lavoro e il nostro modo di vivere."

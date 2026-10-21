@@ -1,0 +1,558 @@
+/* Tema notturno "stanza d'ascolto".
+   Caricato dopo autumn-theme.css: ne mantiene il layout e ridefinisce colori, font e dettagli. */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&family=Caveat:wght@500;600&display=swap');
+
+:root {
+    --night: #0e1422;
+    --night-2: #161e31;
+    --stage: #0a0f1b;
+    --paper: #ece4d2;
+    --paper-2: #d9d1bf;
+    --dim: #a8a293;
+    --line: #28324b;
+    --amber: #f2b84b;
+    --amber-soft: rgba(242, 184, 75, 0.16);
+    --olive: #a3ad7a;
+    --font-display: 'Instrument Serif', Georgia, serif;
+    --font-body: 'Karla', 'Segoe UI', system-ui, sans-serif;
+    --font-hand: 'Caveat', 'Segoe Print', cursive;
+    --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='6' viewBox='0 0 16 6'%3E%3Cpath d='M0 3 Q4 0 8 3 T16 3' fill='none' stroke='%23f2b84b' stroke-width='1.6'/%3E%3C/svg%3E");
+    color-scheme: dark;
+}
+
+body {
+    background: radial-gradient(1200px 600px at 70% -10%, #1a2440 0%, transparent 60%), var(--night);
+    color: var(--paper);
+    font-family: var(--font-body);
+    font-size: 17px;
+}
+
+::selection {
+    background: var(--amber);
+    color: var(--night);
+}
+
+:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+p,
+li,
+label,
+span,
+a,
+input,
+textarea,
+button,
+select {
+    color: var(--paper);
+}
+
+a {
+    color: var(--amber);
+}
+
+a:hover {
+    color: var(--paper);
+}
+
+/* Le particelle lasciano spazio alle animazioni della home */
+.particles,
+.logo-particles {
+    display: none;
+}
+
+/* ---------- Header ---------- */
+.header,
+.header.scrolled {
+    background: rgba(14, 20, 34, 0.82);
+    border-bottom: 1px solid var(--line);
+    box-shadow: none;
+}
+
+.logo {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: var(--paper);
+    font-size: 1.8rem;
+    letter-spacing: 0.04em;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo:hover {
+    transform: none;
+    filter: none;
+    color: var(--paper);
+}
+
+.logo::after {
+    display: none;
+}
+
+/* I due timpani accoppiati dell'Ormia: oscillano in controfase come nel modo rotazionale */
+.logo-mark {
+    width: 30px;
+    height: 20px;
+    overflow: visible;
+    flex: none;
+}
+
+.logo-mark .rock {
+    transform-origin: 15px 9px;
+    animation: eardrums 2.4s ease-in-out infinite;
+}
+
+.logo:hover .logo-mark .rock {
+    animation-duration: 0.5s;
+}
+
+@keyframes eardrums {
+    0%, 100% { transform: rotate(-11deg); }
+    50% { transform: rotate(11deg); }
+}
+
+.nav-link,
+.nav-link:hover,
+.nav-link.active {
+    background: none;
+    box-shadow: none;
+    transform: none;
+    overflow: visible;
+}
+
+.nav-link {
+    color: var(--dim);
+    font-weight: 500;
+}
+
+.nav-link::before {
+    display: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 4px;
+    height: 6px;
+    background: var(--wave) repeat-x 0 0 / 16px 6px;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 350ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link.active,
+.mobile-nav a:hover {
+    color: var(--paper);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+    clip-path: inset(0 0 0 0);
+    animation: wave-run 0.6s linear infinite;
+}
+
+.nav-link.active::after {
+    clip-path: inset(0 0 0 0);
+}
+
+@keyframes wave-run {
+    to { background-position: 16px 0; }
+}
+
+.search-btn,
+.theme-toggle,
+.menu-toggle,
+.search-container,
+.search-input {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--line);
+    color: var(--paper);
+}
+
+.search-btn:hover,
+.theme-toggle:hover,
+.menu-toggle:hover {
+    background: var(--amber-soft);
+    border-color: var(--amber);
+    box-shadow: none;
+}
+
+.mobile-menu {
+    background: var(--night-2);
+    border-left: 1px solid var(--line);
+}
+
+.mobile-nav a {
+    color: var(--paper);
+}
+
+.mobile-nav a:hover {
+    background: var(--amber-soft);
+    border-color: transparent;
+}
+
+.mobile-nav a.active {
+    color: var(--amber);
+}
+
+.mobile-overlay {
+    background: rgba(5, 8, 15, 0.6);
+}
+
+.progress-bar,
+.scroll-indicator,
+.reading-progress {
+    background: var(--amber);
+}
+
+/* ---------- Titoli ---------- */
+.hero-title,
+.page-title,
+.article-title,
+.section-title,
+.category-title,
+.skill-category h3,
+.mission-title,
+.article-content h2,
+.article-cta h3,
+.stat-number {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: var(--paper);
+    font-family: var(--font-display);
+    font-weight: 400;
+}
+
+.section-title::after,
+.article-content h2::after {
+    width: 64px;
+    height: 6px;
+    background: var(--wave) repeat-x 0 0 / 16px 6px;
+    border-radius: 0;
+}
+
+.logo::after {
+    background: none;
+}
+
+/* ---------- Testi secondari ---------- */
+.search-input::placeholder,
+.breadcrumb,
+footer p,
+.page-subtitle,
+.hero-subtitle,
+.section-description,
+.article-subtitle,
+.meta-item,
+.category-description,
+.mission-text,
+.card-excerpt,
+.stat-label,
+.timeline-description,
+.contact-details p,
+.faq-answer {
+    color: var(--dim);
+}
+
+.article-content p,
+.article-content li {
+    color: var(--paper-2);
+}
+
+/* ---------- Superfici ---------- */
+.article-card,
+.category-card,
+.profile-card,
+.stat-card,
+.skill-category,
+.timeline-content,
+.mission-content,
+.contact-form,
+.contact-card,
+.social-link,
+.faq-item,
+.article-cta,
+.highlight-box,
+.article-content pre,
+.share-btn,
+.contact-btn {
+    background: var(--night-2);
+    border: 1px solid var(--line);
+    box-shadow: none;
+}
+
+.article-card:hover,
+.category-card:hover,
+.profile-card:hover,
+.stat-card:hover,
+.skill-category:hover,
+.timeline-content:hover,
+.contact-form:hover,
+.contact-card:hover,
+.social-link:hover,
+.article-cta:hover,
+.share-btn:hover,
+.contact-btn:hover {
+    border-color: var(--amber);
+    box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.8);
+}
+
+.article-card:hover .article-title {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: var(--amber);
+}
+
+/* ---------- Etichette e accenti ---------- */
+.category-badge,
+.article-category,
+.skill-level,
+.card-category,
+.category-count,
+.timeline-year,
+.mission-highlight,
+.contact-details a,
+.read-more,
+.input-icon,
+.breadcrumb span,
+.highlight-box h4 {
+    color: var(--amber);
+}
+
+.category-badge {
+    background: rgba(10, 15, 27, 0.8);
+    border: 0;
+    border-radius: 999px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.74rem;
+}
+
+.article-category,
+.skill-level {
+    background: var(--amber-soft);
+    border: 1px solid rgba(242, 184, 75, 0.3);
+    border-radius: 999px;
+}
+
+.read-more:hover,
+.contact-details a:hover {
+    color: var(--paper);
+}
+
+.hero-text strong {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: var(--amber);
+}
+
+.profile-card p[style] {
+    color: var(--amber) !important;
+}
+
+/* ---------- Pulsanti pieni ---------- */
+.contact-icon,
+.category-icon,
+.submit-btn,
+.cta-button,
+.contact-btn:hover,
+.social-link:hover {
+    background: var(--amber);
+    color: var(--night);
+    border-color: var(--amber);
+}
+
+.contact-btn:hover,
+.contact-btn:hover svg,
+.social-link:hover,
+.submit-btn,
+.cta-button {
+    color: var(--night);
+}
+
+.submit-btn,
+.cta-button {
+    border-radius: 999px;
+}
+
+.submit-btn:hover,
+.cta-button:hover {
+    box-shadow: 0 10px 30px -10px var(--amber);
+}
+
+/* ---------- Form ---------- */
+.form-group label,
+.timeline-title,
+.card-title,
+.contact-details h3,
+.article-content h3,
+.article-content pre code {
+    color: var(--paper);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    background: var(--stage);
+    border: 2px solid var(--line);
+    color: var(--paper);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus,
+.search-input:focus {
+    background: var(--stage);
+    border-color: var(--amber);
+    box-shadow: 0 0 0 3px var(--amber-soft);
+}
+
+.form-group select option {
+    background: var(--night-2);
+    color: var(--paper);
+}
+
+.success-message {
+    background: var(--night-2);
+    border: 1px solid var(--amber);
+    box-shadow: none;
+}
+
+.error-message {
+    background: rgba(255, 107, 91, 0.1);
+    border: 1px solid rgba(255, 107, 91, 0.35);
+    color: #ff9d90;
+}
+
+/* ---------- Articoli ---------- */
+.article-content code {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--line);
+    color: var(--amber);
+}
+
+.article-content a,
+.article-content ol li a {
+    color: var(--amber) !important;
+    text-decoration-color: rgba(242, 184, 75, 0.5);
+}
+
+.article-content a:hover,
+.article-content ol li a:hover {
+    color: var(--paper) !important;
+}
+
+.article-content [style*="font-size:0.5em"] {
+    color: var(--dim) !important;
+}
+
+.article-content [style*="border: 1px solid #ccc"] {
+    border-color: var(--line) !important;
+}
+
+.article-content [style*="color:white"] {
+    color: var(--amber) !important;
+}
+
+.article-content blockquote {
+    background: var(--amber-soft);
+    border-left: 3px solid var(--amber);
+    color: var(--paper);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+}
+
+.article-content blockquote::before {
+    color: var(--amber);
+}
+
+/* ---------- About ---------- */
+.timeline::before {
+    background: var(--line);
+}
+
+.timeline-dot {
+    background: var(--amber);
+    box-shadow: 0 0 0 4px var(--night), 0 0 0 7px var(--amber-soft);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: transparent;
+    border-top: 1px solid var(--line);
+}
+
+footer footer {
+    border-top: 0;
+}
+
+footer::before,
+footer::after {
+    background: none;
+}
+
+.flex.flex-wrap.justify-center.gap-4 a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--dim);
+}
+
+.flex.flex-wrap.justify-center.gap-4 a::before,
+.flex.flex-wrap.justify-center.gap-4 a::after {
+    display: none;
+}
+
+.flex.flex-wrap.justify-center.gap-4 a div,
+.flex.flex-wrap.justify-center.gap-4 a:hover div {
+    color: inherit;
+    transform: none;
+}
+
+.flex.flex-wrap.justify-center.gap-4 a:hover {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: var(--night);
+    box-shadow: none;
+    transform: translateY(-3px) rotate(-6deg);
+}
+
+@media (max-width: 768px) {
+    .header,
+    .header.scrolled {
+        background: rgba(14, 20, 34, 0.96);
+    }
+
+    .article-card,
+    .category-card,
+    .profile-card,
+    .contact-form,
+    .contact-card,
+    .mission-content,
+    .faq-item {
+        background: var(--night-2);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-mark .rock,
+    .nav-link:hover::after {
+        animation: none;
+    }
+}

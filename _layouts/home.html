@@ -1,25 +1,78 @@
---- 
+---
  layout: default
  title: Home
 ---
 
 
- <section class="hero-section">
+ <section class="hero-section home-hero">
       <div class="container">
-          <h1 class="hero-title">Benvenuti nel mio blog personale</h1>
-          <p class="hero-subtitle">Sono un appassionato di tecnologia, audio e musica</p>
+          <span class="hand">settimanando · il diario di Nando</span>
+          <h1 class="hero-title">Racconto il suono, <em>una settimana alla volta.</em></h1>
+          <p class="hero-subtitle">Sono Nando, ingegnere audio. Qui scrivo di tecnologia, musica e delle storie curiose che si nascondono dietro a ogni suono.</p>
+          <div class="string-row">
+              <canvas id="string" tabindex="0" aria-label="Una corda da pizzicare: passaci sopra con il mouse o premi Invio"></canvas>
+              <div class="string-note">
+                  <svg viewBox="0 0 54 40" aria-hidden="true"><path d="M50 6 C34 4 18 10 12 30 M12 30 L6 21 M12 30 L20 24"/></svg>
+                  <span class="hand">pizzica la corda</span>
+              </div>
+          </div>
+          <button class="sound-btn" id="soundBtn" type="button" aria-pressed="false">Suono spento</button>
       </div>
   </section>
+
+  <!-- Stanza d'ascolto: i temi del blog attorno all'ascoltatore -->
+  <section class="room" id="room">
+      <div class="container">
+          <div class="section-head">
+              <span class="hand">la stanza d'ascolto</span>
+              <h2 class="section-title">Da dove arriva la prossima storia?</h2>
+              <p class="section-description">Ogni sorgente è un tema del blog. Avvicinati a una e ascolta cosa racconta. Le onde raggiungono prima l'orecchio più vicino, proprio come spiego nell'articolo sulla mosca dal super udito.</p>
+          </div>
+          <div class="room-grid">
+              <div class="stage-wrap">
+                  <canvas id="stage" aria-label="Stanza d'ascolto: i temi del blog disposti attorno a un ascoltatore"></canvas>
+                  <div class="chips" id="chips" role="group" aria-label="Temi"></div>
+              </div>
+              <div class="story" id="story" aria-live="polite" data-contact="{{ '/contact' | relative_url }}"><div class="story-inner" id="storyInner"></div></div>
+          </div>
+      </div>
+      {% assign mesi = "gennaio,febbraio,marzo,aprile,maggio,giugno,luglio,agosto,settembre,ottobre,novembre,dicembre" | split: "," %}
+      <script type="application/json" id="room-data">
+      [
+      {% for topic in site.data.topics %}
+          {% assign tposts = site.posts | where_exp: "p", "topic.categories contains p.category" %}
+          {% assign latest = tposts | first %}
+          {
+              "name": {{ topic.name | jsonify }},
+              "angle": {{ topic.angle }},
+              "desc": {{ topic.description | jsonify }},
+              "count": {{ tposts.size }}{% if latest %},
+              {% assign mese = latest.date | date: "%-m" | minus: 1 %}
+              {% capture data_it %}{{ latest.date | date: "%-d" }} {{ mesi[mese] }} {{ latest.date | date: "%Y" }}{% endcapture %}
+              "post": {
+                  "title": {{ latest.title | strip | jsonify }},
+                  "sub": {{ latest.subtitle | strip | jsonify }},
+                  "text": {{ latest.description | default: latest.subtitle | strip_html | strip | jsonify }},
+                  "date": {{ data_it | jsonify }},
+                  "read": {{ latest["time-reading"] | jsonify }},
+                  "url": {{ latest.url | relative_url | jsonify }}
+              }{% endif %}
+          }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+      ]
+      </script>
+  </section>
+
   <!-- Sezione Featured Articles -->
-  <section class="featured-section">
+  <section class="featured-section home-latest">
       <div class="container">
           <h2 class="section-title">Ultimi Articoli</h2>
-          
+
           <div class="articles-grid">
               {% for post in site.posts limit: 3 %}
               <article class="article-card" >
                   <div class="category-badge">{{post.category}}</div>
-                  <div class="article-image" style="background-image: url('{{ post.image | relative_url }}')"></div>
+                  <div class="img-clip"><div class="article-image" style="background-image: url('{{ post.image | relative_url }}')"></div></div>
                   <div class="article-content-home">
                       <!-- Rendi più piccolo titolo -->
                       <h3 class="article-title" style="font-size: 1.5rem;">{{post.title}}</h3>

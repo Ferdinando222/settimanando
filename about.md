@@ -13,7 +13,7 @@ title: about
 
 <!-- Sezione Hero -->
 <section class="hero-section">
-    <div class="container" style="display: contents;">
+    <div class="container">
         <div class="hero-content">
             <div class="hero-text">
                 Ciao! Mi chiamo <strong>Ferdinando</strong>, ma per gli amici sono semplicemente <strong>Nando</strong>.

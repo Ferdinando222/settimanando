@@ -12,12 +12,14 @@ title: contacts
 </section>
 <!-- Sezione principale -->
 <section class="contact-main">
-    <div class="container" style="display: contents;">
+    <div class="container">
         <!-- Form di contatto -->
         <div class="contact-form-section">
             <h2 class="section-title">Invia un Messaggio</h2>
             <p class="section-description">
-            </p>       
+                Scrivimi per collaborazioni, consulenze o domande su audio engineering e tecnologia.
+                Ti rispondo il prima possibile con informazioni chiare e concrete.
+            </p>
         </div>
         <!-- Info contatti -->
         <div class="contact-info-section">

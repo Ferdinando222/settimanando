@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "COME UNA MINUSCOLA MOSCA DAL SUPER UDITO HA ISPIRATO LA COSTRUZIONE DI NUOVI MICROFONI MEMS "
+title: "Come una minuscola mosca dal super udito ha ispirato la costruzione di nuovi microfoni MEMS"
+description: "Ha i timpani a mezzo millimetro di distanza, eppure localizza un suono con circa 2° di precisione. Il segreto è un ponte elastico tra le sue orecchie, e oggi lo copiano i microfoni dei nostri smartphone."
 category: "Curiosità tech"
 date: 2025-12-11
 subtitle: "Ormia Ochracea: la mosca dal super udito"
